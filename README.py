@@ -1,34 +1,35 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Como configurar/instalar/usar o `ytm_desktop` no `Linux Ubuntu`
+# # Como configurar/instalar o `yt-dlp` no Linux Ubuntu
 # 
 # ## Resumo
 # 
-# Neste documento estão contidos os principais comandos e configurações para configurar/instalar/usar o `ytm_desktop` no `Linux Ubuntu`.
+# Neste documento estão contidos os principais comandos e configurações para configurar/instalar o Warsaw do `yt-dpl` no Linux Ubuntu.
 # 
 # ## _Abstract_
 # 
-# _In this document are contained the main commands and settings to set up/install/use the `ytm_desktop` on `Linux Ubuntu`._
+# _This document contains the main commands and configurations to configure/install Warsaw from `yt-dpl` on Linux Ubuntu._
 
 # ## Revisão(ões)/Versão(ões)
 
-# |Revisão número |Data da revisão |Descrição da revisão                                   |Autor da revisão             |
-# |:-------------:|:--------------:|:------------------------------------------------------|:----------------------------|
-# |0              |22/11/2023      |<ul><li>Revisão inicial/criação do documento.</li></ul>|Eden Denis F. da S. L. Santos|
+# |Revisão número|Data da revisão|Descrição da revisão|Autor da revisão|
+# |:-:|:-:|:-|:-|
+# |0|04/10/2023|<ul><li>Revisão inicial/criação do documento.</li></ul>|Eden Denis F. da S. L. Santos|
+# |1|05/11/2023|<ul><li>Incluída a Seção Descrição.</li></ul>|Eden Denis F. da S. L. Santos|
 
 # ## Controle de configuração/instalação nos Sistemas Operacionais (SO) vs. Computador
 # 
 # |Numero|Computador          |Sistema Operacional (SO) |Tipo de sistema |Status da configuração/instalação|
 # |:----:|:------------------:|:-----------------------:|:--------------:|:-------------------------------:|
-# |1     |Dell Precision 7520 |Kali   Linux             |Debian          |OK                               |
+# |1     |Dell Precision 7520 |Kali Linux               |Debian          |OK                               |
 # |2     |Dell Precision 7520 |Linux Ubuntu             |Ubuntu          |Pendente                         |
 # |3     |Dell Precision 7520 |Linux Xubuntu            |Ubuntu          |Pendente                         |
 # |4     |Dell Precision 7520 |Windows 10               |Windows         |Pendente                         |
-# |5     |Asus                |Kali   Linux             |Debian          |N/A                              |
+# |5     |Asus                |Kali Linux               |Debian          |N/A                              |
 # |6     |Asus                |Linux Ubuntu             |Ubuntu          |Pendente                         |
 # |7     |Asus                |Linux Xubuntu            |Ubuntu          |OK                               |
-# |8     |Asus                |Windows 10               |Windows         |Pendente                         |
+# |8     |Asus                |Windows 10               |Windows         |N/A                              |
 # 
 # ### Legenda
 # 
@@ -37,20 +38,21 @@
 
 # ## Descrição [2]
 # 
-# ### `ytm_desktop` (YouTube Music Desktop)
+# ### `yt-dlp`
 # 
-# O YTM Desktop é um aplicativo de desktop que oferece acesso conveniente ao YouTube Music fora do navegador. Ele permite que os usuários reproduzam músicas, álbuns, listas de reprodução e rádios personalizadas do YouTube Music diretamente em suas áreas de trabalho, oferecendo uma experiência semelhante à do aplicativo móvel, mas com recursos adicionais, como suporte a atalhos de teclado e integração com o sistema operacional. Essa aplicação é útil para aqueles que desejam acessar facilmente o YouTube Music sem precisar abrir um navegador da web.
+# O `yt-dlp` é uma ferramenta de linha de comando escrita em Python que permite aos usuários baixar vídeos de inúmeros sites de compartilhamento de vídeos como o YouTube, Facebook, Vimeo, e muitos outros. É um fork do popular `youtube-dlc`, que por sua vez é uma continuação do `youtube-dl`, e traz melhorias significativas em termos de velocidade, funcionalidades e a capacidade de contornar as restrições de download impostas por alguns sites. Com `yt-dlp`, você pode baixar vídeos em diferentes formatos e qualidades, extrair áudio, baixar playlists inteiras, e até mesmo configurar downloads automáticos através de scripts, fazendo dele uma ferramenta versátil e poderosa para armazenamento offline de conteúdo de vídeo.
 # 
 
-# ## 1. Como configurar/instalar/usar o `ytm_desktop` no `Linux Ubuntu` [1][3]
+# ## 1. Configurar/Instalar o `yt-dlp` Ubuntu [1]
 # 
-# Para configurar/instalar/usar o `ytm_desktop` no `Linux Ubuntu`, você pode seguir estes passos:
+# Para configurar/instalar o `yt-dlp`, você pode seguir estas etapas:
 # 
-# 1. Abra o terminal. Você pode fazer isso pressionando: `Ctrl + Alt + T`    
+# 1. Abra o terminal. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+# 
 
 # 2. Certifique-se de que seu sistema esteja limpo e atualizado.
 # 
-#     2.1 Limpar o `cache` do gerenciador de pacotes APT. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo APT e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean` 
+#     2.1 Limpar o `cache` do gerenciador de pacotes APT. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo APT e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando: `sudo apt clean`
 #     
 #     2.2 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
 # 
@@ -66,36 +68,35 @@
 # 
 #     2.8 Remover pacotes `.deb` antigos ou duplicados do cache local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando: `sudo apt autoclean`
 
-# Para instalar o ytm_desktop no Linux Ubuntu, você tem duas opções principais: usando o Flatpak ou o Snap.
+# 3. **Você poderá instalar o `yt-dlp` usando o comando**: `sudo apt install yt-dlp -y`
 # 
-# 1. **Usando o Snap:** O Ubuntu já vem com suporte ao Snap por padrão. Para instalar o `ytm_desktop` usando o Snap, você pode utilizar o seguinte comando no terminal: `sudo snap install youtube-music-desktop-app`
+# 4. Depois de concluir a instalação do `yt-dlp`, você pode usar o comando `yt-dlp` para baixar vídeos do YouTube como demonstrado anteriormente: `yt-dlp https://www.youtube.com/watch?v=VxnHJkpl4oo`
 # 
-#     Este comando instalará a versão mais recente do `ytm_desktop` disponível no Snap Store.
+#     - Isso deve permitir que você baixe vídeos do YouTube com sucesso.
+# 
 
-# ### 1.1 Código completo para configurar/instalar/usar
+# ## 2. Código completo para configurar/instalar
 # 
-# Para configurar/instalar/usar o `ytm_desktop` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
+# Para configurar/instalar o `yt-dlp`p no Linux Ubuntu sem precisar digitar linha por linha, você pode seguir estas etapas:
 # 
 # 1. Abra o terminal. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 # 
 # 2. Digite o seguinte comando e pressione `Enter`:
 # 
 #     ```
+#     sudo apt clean
 #     sudo apt autoclean
-#     sudo apt autoremove -y
+#     sudo apt autoremove
 #     sudo apt update -y
-#     sudo apt autoremove -y
+#     sudo apt autoremove
 #     sudo apt autoclean
 #     sudo apt list --upgradable
 #     sudo apt full-upgrade -y
-#     sudo snap install youtube-music-desktop-app
+#     sudo apt install yt-dlp -y
 #     ```
-# 
 
 # ## Referências
 # 
-# [1] OPENAI. ***Instale ytm_desktop no Ubuntu.:*** Disponível em: <https://chat.openai.com/c/1a2f4026-a131-4346-92a9-dd6ee3526f7b> (texto adaptado). ChatGPT. Acessado em: 15/12/2023 12:00.
+# [1] OPENAI. ***Baixar vídeos do youtube.*** Disponível em: <https://chat.openai.com/c/87f54416-69e5-448d-a8c4-b65b7d4ba0ad> (texto adaptado). ChatGPT. Acessado em: 04/10/2023 21:29.
 # 
-# [2] OPENAI. ***Vs code: editor popular:*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). ChatGPT. Acessado em: 15/12/2023 12:00.
-# 
-# [3] OPENAI. ***Comandos de manutenção do ubuntu:*** https://chat.openai.com/c/4a8cfaa2-30d6-474d-821f-7047a6a39830. ChatGPT. Acessado em: 15/12/2023 12:00.
+# [2] OPENAI. ***Baixar vídeos com `yt-dlp`.*** Disponível em: <https://chat.openai.com/c/6cd29c98-8868-444a-bdc3-47e4c9c2e272> (texto adaptado). ChatGPT. Acessado em: 05/11/2023 23:17.
