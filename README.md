@@ -8,31 +8,6 @@ Neste documento estão contidos os principais comandos e configurações para co
 
 _This document contains the main commands and configurations to configure/install Warsaw from `yt-dpl` on Linux Ubuntu._
 
-## Revisão(ões)/Versão(ões)
-
-|Revisão número|Data da revisão|Descrição da revisão|Autor da revisão|
-|:-:|:-:|:-|:-|
-|0|04/10/2023|<ul><li>Revisão inicial/criação do documento.</li></ul>|Eden Denis F. da S. L. Santos|
-|1|05/11/2023|<ul><li>Incluída a Seção Descrição.</li></ul>|Eden Denis F. da S. L. Santos|
-
-## Controle de configuração/instalação nos Sistemas Operacionais (SO) vs. Computador
-
-|Numero|Computador          |Sistema Operacional (SO) |Tipo de sistema |Status da configuração/instalação|
-|:----:|:------------------:|:-----------------------:|:--------------:|:-------------------------------:|
-|1     |Dell Precision 7520 |Kali Linux               |Debian          |OK                               |
-|2     |Dell Precision 7520 |Linux Ubuntu             |Ubuntu          |Pendente                         |
-|3     |Dell Precision 7520 |Linux Xubuntu            |Ubuntu          |Pendente                         |
-|4     |Dell Precision 7520 |Windows 10               |Windows         |Pendente                         |
-|5     |Asus                |Kali Linux               |Debian          |N/A                              |
-|6     |Asus                |Linux Ubuntu             |Ubuntu          |Pendente                         |
-|7     |Asus                |Linux Xubuntu            |Ubuntu          |OK                               |
-|8     |Asus                |Windows 10               |Windows         |N/A                              |
-
-### Legenda
-
-- **N/A:** Not apllicable/Não aplicável
-- **OK:** Zero killed
-
 ## Descrição [2]
 
 ### `yt-dlp`
